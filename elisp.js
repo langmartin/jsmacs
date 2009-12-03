@@ -10,19 +10,41 @@
    }
 
    var syntax = {
-     lambda: lambda,
+     lambda: lambdabody,
      if: _if_,
      defmacro: defmacro,
-     defun: defun
+     defun: defun,
+     set: set
    };
 
    function lambda (expr) {
+     return cons("lambda", expr);
    }
 
    function _if_ (env, expr) {
      return (evaluate(env, expr.car()))
        ? evaluate(env, expr.cadr())
        : evaluate(env, expr.caddr());
+   }
+
+   function defmacro (env, expr) {
+     syntax[car(expr)] = evaluate(env, lambda(cdr(expr)));
+     return unspecified;
+   }
+
+   function set (env, expr) {
+     var name = evaluate(env, car(expr));
+     env[name] = evaluate(env, cdr(expr));
+     return unspecified;
+   }
+
+   function defun (env, expr) {
+     evaluate(
+       env,
+       cons("set",
+            cons(car(expr),
+                 lambda(cdr(expr))))
+     );
    }
      
    function evaluate (env, expr) {
