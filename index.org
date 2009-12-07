@@ -1,3 +1,5 @@
+#+TITLE:     JSMacs: Emacs in JavaScript
+
 by [[http://orangesoda.net/lang.html][Lang]] [2009-12-07 Mon]
 
 The [[file:test.html][test code]] requires =console.debug=.
@@ -27,7 +29,6 @@ The [[file:test.html][test code]] requires =console.debug=.
 *** Colors
 
 * COMMENT Org Mode
-#+TITLE:     JSMacs: Emacs in JavaScript
 #+AUTHOR:    Lang Martin
 #+EMAIL:     lang.martin@gmail.com
 #+LANGUAGE:  en
