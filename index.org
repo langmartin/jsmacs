@@ -18,14 +18,36 @@ The [[file:test.html][test code]] requires =console.debug=.
 **** TODO Number
 **** TODO Quasiquote
 
-*** Dynamic Scope
+*** Symbol Tables
+**** Macro (local?)
+**** Function (local?)
+**** Symbol
+***** Dynamic Scope
+**** Frame Local
+**** Buffer Local
 
 *** Data Types
+**** Function
+**** List
+**** Vector
+**** Number
+**** Character
+**** String
+**** Buffer
+**** Overlay
+**** Face
+
+*** Primitives
+**** set
+**** set-default
+**** defmacro, defun, defvar
+**** lambda
+**** let
 
 ** Keyboard Capture
 *** Mouse Capture
 
-** Buffers
+** Display
 *** Colors
 
 * COMMENT Org Mode

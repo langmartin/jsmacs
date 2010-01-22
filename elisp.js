@@ -11,7 +11,7 @@
 
    var syntax = {
      lambda: lambdabody,
-     if: _if_,
+     if: _if,
      defmacro: defmacro,
      defun: defun,
      set: set
@@ -21,21 +21,28 @@
      return cons("lambda", expr);
    }
 
-   function _if_ (env, expr) {
+   function _if (env, expr) {
      return (evaluate(env, expr.car()))
        ? evaluate(env, expr.cadr())
        : evaluate(env, expr.caddr());
-   }
-
-   function defmacro (env, expr) {
-     syntax[car(expr)] = evaluate(env, lambda(cdr(expr)));
-     return unspecified;
    }
 
    function set (env, expr) {
      var name = evaluate(env, car(expr));
      env[name] = evaluate(env, cdr(expr));
      return unspecified;
+   }
+
+   function defmacro (env, expr) {
+     env["macro table"][car(expr)] = analyse(cdr(expr));
+   }
+
+   function defun (env, expr) {
+     env["function table"][car(expr)] = analyse(cdr(expr));
+   }
+
+   function defvar (env, expr) {
+     env["symbol table"][car(expr)] = analyse(cdr(expr));
    }
 
    function defun (env, expr) {
