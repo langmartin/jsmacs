@@ -1,4 +1,6 @@
 #+TITLE:     JSMacs: Emacs in JavaScript
+#+AUTHOR:    Lang Martin
+#+EMAIL:     lang.martin@gmail.com
 
 by [[http://orangesoda.net/lang.html][Lang]] [2009-12-07 Mon]
 
@@ -50,9 +52,14 @@ The [[file:test.html][test code]] requires =console.debug=.
 ** Display
 *** Colors
 
+* Compilation Steps
+** throw/catch
+** variable lookup
+** macro expansion
+** function application
+*** inlining
+
 * COMMENT Org Mode
-#+AUTHOR:    Lang Martin
-#+EMAIL:     lang.martin@gmail.com
 #+LANGUAGE:  en
 #+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
 #+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
