@@ -1,4 +1,4 @@
-#+TITLE:     JSMacs: Emacs in JavaScript
+#+TITLE:     JSMacs Emacs in JavaScript
 #+AUTHOR:    Lang Martin
 #+EMAIL:     lang.martin@gmail.com
 
